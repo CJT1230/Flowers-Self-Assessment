@@ -1,35 +1,48 @@
 const flowers = [
     whiteRose = {
-        id: 1,
         color: "White",
         species: "Rose",
-        price: 0.90
+        price: 0.90,
+        id: 1
     },
     redTulip = {
-        id: 2,
         color: "Red",
         species: "Tulip",
-        price: 1.10
+        price: 1.10,
+        id: 2
     }
 ]
 
 const addFlower = (flowerObject) => {
-
-    /*
-        This function should add an `id` property
-        to the object that was sent to the function.
-        The value of the `id` property should be 1
-        greater than the current maximum `id` in the
-        array.
-
-        Once the `id` property has been added to the,
-        object, the object should then be put into the
-        `flowers` array.
-    */
-
-
+    const lastIndex = flowers.length - 1
+    const currentLastFlower = flowers[lastIndex]
+    const maxId = currentLastFlower.id
+    const idForNewFlower = maxId + 1
+    
+    flowerObject.id = idForNewFlower
+    flowers.push(flowerObject)
+}
+const yellowTulip = {
+    color: "Yellow",
+    species: "Tulip",
+    price: 1.10
 }
 
+const orangeRose = {
+    color: "Orange",
+    species: "Rose",
+    price: 0.90
+}
+
+const blueOrchid = {
+    color: "Blue",
+    species: "Orchid",
+    price: 1.05
+}
+
+addFlower(yellowTulip)
+addFlower(orangeRose)
+addFlower(blueOrchid)
 
 const findExpensiveFlowers = () => {
     const expensiveFlowers = []  // Do not change this code
