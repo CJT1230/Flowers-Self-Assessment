@@ -1,8 +1,20 @@
 const flowers = [
-
+    whiteRose = {
+        id: 1,
+        color: "White",
+        species: "Rose",
+        price: 0.90
+    },
+    redTulip = {
+        id: 2,
+        color: "Red",
+        species: "Tulip",
+        price: 1.10
+    }
 ]
 
 const addFlower = (flowerObject) => {
+
     /*
         This function should add an `id` property
         to the object that was sent to the function.
