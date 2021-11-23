@@ -1,15 +1,15 @@
 const flowers = [
     whiteRose = {
-        id: 1,
         color: "White",
         species: "Rose",
-        price: 0.90
+        price: 0.90,
+        id: 1
     },
     redTulip = {
-        id: 2,
         color: "Red",
         species: "Tulip",
-        price: 1.10
+        price: 1.10,
+        id: 2
     }
 ]
 
@@ -22,7 +22,27 @@ const addFlower = (flowerObject) => {
     flowerObject.id = idForNewFlower
     flowers.push(flowerObject)
 }
+const yellowTulip = {
+    color: "Yellow",
+    species: "Tulip",
+    price: 1.10
+}
 
+const orangeRose = {
+    color: "Orange",
+    species: "Rose",
+    price: 0.90
+}
+
+const blueOrchid = {
+    color: "Blue",
+    species: "Orchid",
+    price: 1.05
+}
+
+addFlower(yellowTulip)
+addFlower(orangeRose)
+addFlower(blueOrchid)
 
 const findExpensiveFlowers = () => {
     const expensiveFlowers = []  // Do not change this code
