@@ -13,6 +13,7 @@ const flowers = [
     }
 ]
 
+// function allows for the user to declare an array and add it to the flowers array along with a numerically unique id.
 const addFlower = (flowerObject) => {
     const lastIndex = flowers.length - 1
     const currentLastFlower = flowers[lastIndex]
@@ -22,41 +23,15 @@ const addFlower = (flowerObject) => {
     flowerObject.id = idForNewFlower
     flowers.push(flowerObject)
 }
-const yellowTulip = {
-    color: "Yellow",
-    species: "Tulip",
-    price: 1.10
-}
 
-const orangeRose = {
-    color: "Orange",
-    species: "Rose",
-    price: 0.90
-}
-
-const blueOrchid = {
-    color: "Blue",
-    species: "Orchid",
-    price: 1.05
-}
-
-addFlower(yellowTulip)
-addFlower(orangeRose)
-addFlower(blueOrchid)
-
+// Checks to see if the flowers prices are greater than 1, if so they are labeled as expensiveFlowers
 const findExpensiveFlowers = () => {
     const expensiveFlowers = []  // Do not change this code
-
-
-    /*
-        Write a for..of loop that iterate the array
-        of flowers, and if the price of a flower is
-        greater than or equal to 1.00, it should be
-        added to the `expensiveFlowers` array.
-    */
-
-
-
+    for (const flower of flowers) {
+        if (flower.price > 1) {
+            expensiveFlowers.push(flower)
+        }
+    }
 
     return expensiveFlowers  // Do not change this code
 }
